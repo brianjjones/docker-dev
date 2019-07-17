@@ -1,0 +1,12 @@
+{
+    "app_type":"null",
+    "os":"ubuntu:18.04",
+    "os_packages":["ca-certificates", "git", "lsb-release", "mongodb", "nodejs", "npm", "sudo", "wget", "net-tools", "iputils-ping", "vim", "curl", "zsh", "man"],
+    "npm_packages":["nodemon", "browser-sync"],
+    "username":"root",
+    "git_addr":"null",
+    "app_name":"app.js",
+    "backup_folder":"backup",
+    "nodemon_port":8000,
+    "browsersync_ports":[3000, 3001]
+}

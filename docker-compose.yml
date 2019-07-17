@@ -1,0 +1,42 @@
+version: '3'
+services:
+  app:
+    image: ubuntu-dev:latest
+    volumes:
+      - .:/dev_vol
+    working_dir: /dev_vol
+    command: npm run app
+    network_mode: host
+    ports:
+      - "1234:1234"
+      - "1235:1235"
+      - "8000:8000"
+
+  browsersync:
+    image: ubuntu-dev:latest
+    volumes:
+      - .:/dev_vol
+    working_dir: /dev_vol
+    command: npm run watch
+    network_mode: host
+    ports:
+      - "3000:3000"
+      - "3001:3001"
+
+  live_env:
+    image: ubuntu-dev:latest
+    container_name: "live_env"
+    volumes:
+      - .:/dev_vol
+    working_dir: /dev_vol
+    tty: true
+    network_mode: host
+
+  back_env:
+    image: ubuntu-dev:latest
+    container_name: "back_env"
+    volumes:
+      - ./backup:/dev_vol
+    working_dir: /dev_vol
+    tty: true
+    network_mode: host

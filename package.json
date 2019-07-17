@@ -1,0 +1,17 @@
+{
+  "name": "exptest",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "app": "nodemon app.js",
+    "watch": "browser-sync start --proxy 'localhost:8000' --files 'public'",
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "nodemon": "^1.19.1"
+  }
+}

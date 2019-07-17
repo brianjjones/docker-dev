@@ -1,0 +1,13 @@
+version: '2'
+services:
+
+  base:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - http_proxy
+        - https_proxy
+        - username
+    working_dir: /dev_vol
+    image: ubuntu-dev
